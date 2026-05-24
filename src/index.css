@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Webkit scrollbar for perfect premium UI finish */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #110c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #372a4d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* Base body adjustments */
+body {
+  background-color: #171221;
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Accent lighting effects */
+.lightning-border-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.lightning-border-glow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.lightning-border-glow:hover::after {
+  border-color: rgba(239, 68, 68, 0.7);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.25);
+}
+
+.glow-red-btn {
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+  transition: all 0.2s ease;
+}
+
+.glow-red-btn:hover {
+  box-shadow: 0 4px 18px rgba(239, 68, 68, 0.45);
+}
+
+/* Glassmorphism containers */
+.glass-panel {
+  background: rgba(30, 24, 46, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-panel-heavy {
+  background: rgba(18, 14, 28, 0.92);
+  backdrop-filter: blur(20px);
+}
